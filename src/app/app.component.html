@@ -1,0 +1,17 @@
+<article class="cont">
+  <button (click)="increase()"
+
+          class="like_button">+1
+  </button>
+  <button (click)="decrease()"
+          [disabled]="cannotDecrease"
+          class="like_button">-1
+  </button>
+  <button (click)="toOne()"
+          [disabled]="cannotDecrease"
+          class="like_button">=0
+  </button>
+
+  <p class="text">Счётчик = {{counter}}</p>
+  <p *ngIf="updateAt" class="text">Обновлялось {{updateAt | date: "HH:mm:ss dd/MM/yyyy"}}</p>
+</article>
